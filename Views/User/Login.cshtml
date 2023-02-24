@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="account_grid">
+        <div class=" login-right">
+            <h3>REGISTERED CUSTOMERS</h3>
+            <p>If you have an account with us, please log in.</p>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <form>
+                    <div>
+                        <td>User Name</td>
+                        <td>
+                            @Html.TextBox("TenDN")
+                            @ViewData["Loi1"]
+                        </td>
+                    </div> 
+                    <div>
+                        <td align="right">Password</td>
+                        <td style="border: 1px solid #DDDBDB; outline-color: #fb4d01; width: 96%; font-size: 0.9em; padding: 10px;">
+                            @Html.TextBox("Matkhau")
+                            @ViewData["Loi2"]
+                        </td>
+                    </div>
+                    <a class="forgot" href="#">Forgot Your Password?</a>
+                    <input type="submit" value="Login">
+                </form>
+            }
+        </div>
+        <div class=" login-left">
+            <h3>NEW CUSTOMERS</h3>
+            <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+            <a class="acount-btn" href="@Url.Action("Index","Register",null,Request.Url.Scheme)">Create an Account</a>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+</div>
+

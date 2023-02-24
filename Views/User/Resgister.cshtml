@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "Resgister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+
+    <div class="register">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <div class="container">
+                <div class="  register-top-grid">
+                    <h3>PERSONAL INFORMATION</h3>
+                    <tr class="mation">
+                        <td><span>First Name<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("HoKH")
+                            @ViewData["Loi1"]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Last Name<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("TenKH")
+                            @ViewData["Loi2"]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>User Name<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("TenDN")
+                            @ViewData["Loi3"]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Phone Number<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("Dienthoai")
+                            @ViewData["Loi8"]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Email<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("Email")
+                            @ViewData["Loi7"]
+                        </td>
+                    </tr>
+                    <div class="login-mail">
+                        <input type="date" name="Ngaysinh" />
+                    </div>
+                    <tr>
+                        <td><span>Password<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("Matkhau")
+                            @ViewData["Loi5"]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>Password<label>*</label></span></td>
+                        <td>
+                            @Html.TextBox("Nhaplaimatkhau")
+                            @ViewData["Loi6"]
+                        </td>
+                    </tr>
+                    <a class="news-letter " href="#">
+                        <label class="checkbox1"><input type="checkbox" name="checkbox"><i> </i>Forget Password</label>
+                    </a>
+                    <label class="hvr-skew-backward">
+                        <input type="submit" value="Submit">
+                    </label>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@*<div class="container">
+
+        <div class="register">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <div class="container">
+                    <div class="login">
+                        <div class="col-md-6 login-do">
+                            <div class="login-mail">
+                                @Html.TextBox("HoKH")
+                                @ViewData["Loi1"]
+                            </div>
+                            <div class="login-mail">
+                                @Html.TextBox("TenKH")
+                                @ViewData["Loi2"]
+                            </div>
+                            <div class="login-mail">
+                                @Html.TextBox("TenDN")
+                                @ViewData["Loi3"]
+                            </div>
+                            <div class="login-mail">
+                                @Html.TextBox("Gioitinh")
+                                @ViewData["Loi4"]
+                            </div>
+                            <div class="login-mail">
+                                @Html.TextBox("Dienthoai")
+                                @ViewData["Loi8"]
+
+                            </div>
+                            <div class="login-mail">
+                                @Html.TextBox("Email")
+                                @ViewData["Loi7"]
+
+                            </div>
+                            <div class="login-mail">
+                                <input type="date" name="Ngaysinh" />
+                            </div>
+                            <div class="login-mail">
+                                @Html.Password("Matkhau")
+                                @ViewData["Loi5"]
+                            </div>
+                            <div class="login-mail">
+                                @Html.Password("Nhaplaimatkhau")
+                                @ViewData["Loi6"]
+                            </div>
+                            <a class="news-letter " href="#">
+                                <label class="checkbox1"><input type="checkbox" name="checkbox"><i> </i>Forget Password</label>
+                            </a>
+                            <label class="hvr-skew-backward">
+                                <input type="submit" value="Submit">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>*@
